@@ -1,5 +1,7 @@
 // lib/src/models/user_model.dart
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class UserModel {
   final String id;
   final String email;
@@ -24,8 +26,8 @@ class UserModel {
       email: map['email'] ?? '',
       name: map['name'] ?? '',
       photoUrl: map['photoUrl'],
-      createdAt: (map['createdAt'] as Timestamp).toDate(),
-      updatedAt: (map['updatedAt'] as Timestamp).toDate(),
+      createdAt: (map['createdAt'] as Timestamp?)?.toDate() ?? DateTime.now(),
+      updatedAt: (map['updatedAt'] as Timestamp?)?.toDate() ?? DateTime.now(),
     );
   }
 

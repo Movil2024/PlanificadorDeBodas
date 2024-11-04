@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../../utils/constants.dart';
 import '../../config/routes.dart';
 import '../../widgets/common/loading_indicator.dart';
-import '../dashboard/dashboard_screen.dart';
+//import '../dashboard/dashboard_screen.dart';
 import 'login_screen.dart';
 
 class AuthWrapper extends StatelessWidget {

@@ -1,5 +1,6 @@
 // lib/src/providers/auth_provider.dart
 
+import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../services/notification_service.dart';
@@ -25,11 +26,11 @@ class AuthProvider extends ChangeNotifier {
     });
   }
 
-  Future<bool> signIn(
-      BuildContext context, {
-        required String email,
-        required String password,
-      }) async {
+  Future<bool> signIn({
+    required BuildContext context,
+    required String email,
+    required String password,
+  }) async {
     try {
       _setLoading(true);
       final userCredential = await _auth.signInWithEmailAndPassword(
@@ -50,12 +51,12 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  Future<bool> signUp(
-      BuildContext context, {
-        required String email,
-        required String password,
-        required String name,
-      }) async {
+  Future<bool> signUp({
+    required BuildContext context,
+    required String email,
+    required String password,
+    required String name,
+  }) async {
     try {
       _setLoading(true);
       final userCredential = await _auth.createUserWithEmailAndPassword(
@@ -77,7 +78,7 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  Future<void> signOut(BuildContext context) async {
+  Future<void> signOut({required BuildContext context}) async {
     try {
       await _auth.signOut();
       NotificationService.showInfo(context, 'Sesión cerrada');
@@ -89,7 +90,10 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  Future<bool> resetPassword(BuildContext context, String email) async {
+  Future<bool> resetPassword({
+    required BuildContext context,
+    required String email,
+  }) async {
     try {
       _setLoading(true);
       await _auth.sendPasswordResetEmail(email: email);

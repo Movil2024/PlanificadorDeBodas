@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "679310893999",
+    "project_id": "planificadorbodas",
+    "storage_bucket": "planificadorbodas.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679310893999:android:709683c3dbc391b796c55a",
+        "android_client_info": {
+          "package_name": "com.planificador.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2GI00C9T6KlLW8AugawxG6cSCfmu5WnI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

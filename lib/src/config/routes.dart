@@ -1,12 +1,12 @@
 // lib/src/config/routes.dart
 
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 import '../utils/constants.dart';
 import '../views/auth/auth_wrapper.dart';
 import '../views/auth/login_screen.dart';
 import '../views/auth/register_screen.dart';
 import '../views/auth/forgot_password_screen.dart';
-import '../views/dashboard/dashboard_screen.dart';
+//import '../views/dashboard/dashboard_screen.dart';
 
 class AppRoutes {
   // Ruta inicial de la aplicación
@@ -18,7 +18,7 @@ class AppRoutes {
     AppConstants.routeLogin: (context) => const LoginScreen(),
     AppConstants.routeRegister: (context) => const RegisterScreen(),
     AppConstants.routeForgotPassword: (context) => const ForgotPasswordScreen(),
-    AppConstants.routeDashboard: (context) => const DashboardScreen(),
+    //AppConstants.routeDashboard: (context) => const DashboardScreen(),
   };
 
   // Manejador de rutas desconocidas
